@@ -1,0 +1,40 @@
+body {
+	font-family:"Noto Sans Korean",sans-serif;
+	color:#fff;
+	background-color:#1f1f1f;
+	font-size:30px;
+	margin:0;
+	padding:0;
+}
+hr {
+	border:1px solid #555;
+}
+input,button,textarea,select {
+	font-family:inherit;
+	font-size:inherit;
+	color:inherit;
+	background-color:inherit;
+}
+del,s {
+	color:#808080;
+}
+del:hover,del:active,s:hover,s:active {
+	color:#808080;
+	text-decoration:none;
+}
+.center {
+	text-align:center;
+}
+kbd {
+	font-family:"Noto Sans Korean",sans-serif;
+	color:inherit;
+	text-shadow:5px 5px 5px #666;
+}
+*:root {
+	overflow:auto;
+	word-break:keep-all;
+}
+a:link,a:visited,a:hover,a:active {
+	color:#e35300;
+	text-decoration: none;
+}
