@@ -38,4 +38,15 @@ a:link,a:visited,a:hover,a:active {
 	color:#e35300;
 	text-decoration: none;
 }
-blink {}
+@keyframes blink-toggle {
+ 0%, 49% { opacity: 1; }
+ 50%, 100% { opacity: 0; }
+}
+blink {
+ display: inline; / inline 요소로 유지 /
+ animation: blink-toggle 1s steps(1, start) infinite;
+ -webkit-animation: blink-toggle 1s steps(1, start) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+ blink { animation: none; -webkit-animation: none; }
+}
