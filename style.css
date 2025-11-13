@@ -50,3 +50,4 @@ blink {
 @media (prefers-reduced-motion: reduce) {
  blink { animation: none; -webkit-animation: none; }
 }
+wow {color: pink}
