@@ -50,3 +50,43 @@ blink {
 @media (prefers-reduced-motion: reduce) {
  blink { animation: none; -webkit-animation: none; }
 }
+
+/* 코드 태그와 코드 블록에 코딩용 고정폭 글꼴 적용 */
+code, pre, kbd, samp, code[class*="language-"], pre[class*="language-"] {
+  /* 우선순위 있는 모던 코딩 폰트들 + 대체 폰트 */
+  font-family: "Fira Code", "JetBrains Mono", "Source Code Pro", "Menlo", "Consolas", "Monaco", "Andale Mono", monospace;
+  font-size: 0.9em; /* 본문보다 약간 작게 */
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 프로그래밍용 가독성 보조 */
+  line-height: 1.45;
+  font-variant-ligatures: contextual;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* 인라인 코드 스타일 */
+code, code[class*="language-"] {
+  background-color: rgba(255,255,255,0.03);
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+/* 코드 블록(pre) 스타일 */
+pre, pre[class*="language-"] {
+  display: block;
+  background-color: rgba(255,255,255,0.02);
+  padding: 0.8em;
+  margin: 0.6em 0;
+  border-radius: 6px;
+  overflow: auto;
+  white-space: pre;
+  tab-size: 4;
+}
+
+/* reduced motion 환경에서는 ligature 애니메이션 관련 영향 없도록(안정성) */
+@media (prefers-reduced-motion: reduce) {
+  code, pre, kbd, samp { font-feature-settings: "liga" 0, "calt" 0; }
+}
