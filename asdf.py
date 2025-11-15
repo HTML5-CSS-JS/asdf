@@ -4,7 +4,7 @@ import os
 import sys
 #이 문서는 실험용임ㅋㅋ
 print("\(\"asdf\)\")
-asdf= 1234
+asdf = 1234
 null = None
 true = True
 false = False
